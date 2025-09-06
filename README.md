@@ -88,6 +88,17 @@ Evaluated using:
 
 ---
 
+## Outliers
+
+Outlier treatment was considered during preprocessing, but not applied. The reasons are:
+
+- The dataset represents real survey responses, and extreme values (e.g., very large household sizes or very old respondents) may reflect real-world conditions rather than errors.  
+- Outlier removal could distort the socio-economic representation of the population.  
+- Tree-based models like Random Forest are robust to outliers, reducing the need for explicit outlier handling.  
+
+Thus, keeping outliers preserved the integrity of the dataset while maintaining fairness in the model.
+
+---
 ## Key Insights
 - The model performs well overall with high accuracy and strong ROC–AUC.
 - Precision is high, but recall is lower for the minority class (bank account owners).
